@@ -31,6 +31,7 @@
 							<td th:text="${p.description}">Default</td>
 							<td th:text="${p.price}">0</td>
 							<td class="btn-group">
+								<a th:href="@{/cart/add/} + ${p.productNumber}" type="button" class="btn btn-secondary">Add to Cart</a>
 								<a th:href="@{/products/update/} + ${p.productNumber}" type="button" class="btn btn-secondary">Edit</a>
 								<a th:href="@{/products/delete/} + ${p.productNumber}" type="button" class="btn btn-danger">x</a>
 							</td>

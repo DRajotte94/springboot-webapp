@@ -25,21 +25,21 @@ public class ProductsController {
 	public String showAllProducts(Model model) {		
 		List<ProductModel> products = service.getProducts();
 		model.addAttribute("products", products);		
-		return "products.html";
+		return "products";
 	}
 	
 	@GetMapping("/{searchId}")
 	public String searchById(Model model, @PathVariable(name="searchId") int searchId) {
 		ProductModel products = service.getById(searchId);
 		model.addAttribute("products", products);
-		return "products.html";
+		return "products";
 	}
 	
 	@GetMapping("/search/{searchTerm}")
 	public String searchProducts(Model model, @PathVariable(name="searchTerm") String searchTerm) {
 		List<ProductModel> products = service.searchProducts(searchTerm);
 		model.addAttribute("products", products);
-		return "products.html";
+		return "products";
 	}
 	
 	@GetMapping("/create")
