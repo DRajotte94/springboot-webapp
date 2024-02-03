@@ -1,7 +1,5 @@
 package com.app.webapp.controller;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +31,7 @@ public class AccountController {
 	}
 	
 	@PostMapping("/registration/process")
-	public String createUser(@Valid UserModel newUser, Model model, BindingResult bindingResult) {
+	public String createUser(UserModel newUser, Model model, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "registration";
 		}
