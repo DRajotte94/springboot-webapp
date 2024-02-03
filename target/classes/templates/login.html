@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{/layouts/defaultLayout}">
+	<head>
+    	<title>Login</title>
+	</head>
+	<body>
+		<section layout:fragment="content">
+			<div class="container">
+				<h3>Sign-in</h3>
+	    		<form>
+				<div class="form-group">
+					<label>Username:</label>
+					<input class="form-control" type="text" />
+				</div>
+				<div class="form-group">
+					<label>Password:</label>
+					<input class="form-control" type="text" />
+				</div>
+			    <p>
+					<input class="btn btn-outline-primary" type="submit" value="Sign-in" /> 
+			    	<a th:href="@{/account/reset}" class="btn btn-outline-danger" type="button">Forgot Password</a>
+			    </p>
+		    </form>
+		    <h5>Don't have an account? Click <a href="/account/registration">here</a>!</h5>
+			</div>
+		</section>
+	</body>
+</html>

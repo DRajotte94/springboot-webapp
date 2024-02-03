@@ -13,15 +13,5 @@ public class MainController {
 	public String showHome() {
 		return "home";
 	}
-	
-	@GetMapping("/orders")
-	public String showOrders() {
-		return "orders";
-	}
-	
-	@GetMapping("/create")
-	public String showCreate() {
-		return "create";
-	}
 
 }
